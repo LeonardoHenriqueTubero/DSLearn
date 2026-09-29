@@ -28,6 +28,7 @@ public abstract class Lesson {
             })
     private Set<Enrollment> enrollmentsDone = new HashSet<>();
 
+    @OneToMany(mappedBy = "lesson")
     private List<Deliver> deliveries = new ArrayList<>();
 
     public Lesson() {
