@@ -1,6 +1,5 @@
 package com.devsuperior.dslearn.entities;
 
-import com.devsuperior.dslearn.Enrollment;
 import jakarta.persistence.*;
 
 import java.util.HashSet;
@@ -29,7 +28,7 @@ public abstract class Lesson {
                 @JoinColumn(name = "user_id"),
                 @JoinColumn(name = "offer_id")
             })
-    private Set<Enrollment> enrollmentDone = new HashSet<>();
+    private Set<Enrollment> enrollmentsDone = new HashSet<>();
 
     public Lesson() {
     }
@@ -74,7 +73,7 @@ public abstract class Lesson {
     }
 
     public Set<Enrollment> getEnrollmentDone() {
-        return enrollmentDone;
+        return enrollmentsDone;
     }
 
     @Override
